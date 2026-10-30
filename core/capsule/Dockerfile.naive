@@ -1,0 +1,8 @@
+# Одноетапна збірка для порівняння
+FROM rust:1.79
+
+WORKDIR /src
+COPY sid/ .
+RUN cargo build --release
+
+CMD ["./target/release/sid"]
